@@ -1,0 +1,17 @@
+@import url(../index.css);
+
+.btnRequest{
+    color: white;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 999px;
+    padding: .7rem 1.5rem;
+    background: var(--gradiantBTN);
+    cursor: pointer;
+    transition: .3s ease;
+
+    &:hover{
+        opacity: .7;
+    }
+}

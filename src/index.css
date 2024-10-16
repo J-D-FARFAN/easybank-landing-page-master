@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(components/btnRequest.css);
 
 
 :root{
@@ -7,6 +8,7 @@
   --DarkBlue: hsl(233, 26%, 24%);
   --LimeGreen: hsl(136, 65%, 51%);
   --BrightCyan: hsl(192, 70%, 51%);
+  --gradiantBTN: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
   --GrayishBlue: hsl(233, 8%, 62%);
   --LightGrayishBlue: hsl(220, 16%, 96%);
   --VeryLightGray: hsl(0, 0%, 98%);
@@ -19,4 +21,160 @@
 
   /*Font*/
   --fontF: "Public Sans", sans-serif;
+}
+
+.spaceMargin{
+  padding: 0 9rem;
+}
+
+.txt{
+  color: var(--GrayishBlue);
+  font-size: 17px;
+  line-height: 150%;
+}
+
+.secondTitle{
+  color: var(--DarkBlue);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.threeTitle{
+  font-weight: 400;
+  color: var(--DarkBlue);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontF);
+}
+
+body{
+  overflow-x: hidden;
+  height: 100%;
+
+  .content-headerPage{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--White);
+    z-index: 99;
+
+    .bx-navbar{
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .navbar{
+        display: flex;
+        gap: 1.7rem;
+        transition: .3s ease all;
+
+        .items-navbar{
+          position: relative;
+          color: var(--GrayishBlue);
+          text-decoration: none;
+          transition: .3s ease all;
+
+          &::before{
+            content: '';
+            position: absolute;
+            display: none;
+            width: 0;
+            height: 5px;
+            bottom: -24px;
+            transition: .3s ease;
+          }
+
+          &:hover{
+            color: var(--DarkBlue);
+
+            &::before{width: 100%; background: var(--gradiantBTN); display: block;}
+          }
+          
+        }
+      }
+    }
+  }
+
+
+  .contentHeroPage{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    .introductionLangingPage{
+      padding-left: 9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .titlePage{
+        font-size: 4rem;
+        width: 600px;
+        color: var(--DarkBlue);
+        font-weight: 400;
+      }
+      .txt{width: 430px;}
+    }
+
+    .contentIllustrationPage{
+      position: relative;
+      width: 70%;
+      height: 120vh;
+      top: -8px;
+      background: url(../public/images/bg-intro-desktop.svg) top left no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+
+      &::before{
+        content: '';
+        position: absolute;
+        right: -125px;
+        bottom: -28px;
+        width: 100%;
+        height: 100%;
+        background: url(../public/images/image-mockups.png) center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .content-whyChooseEasybank{
+    height: 100%;
+    background-color: var(--LightGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 9rem;
+
+    .introductionSecondModule{
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+      width: 610px;
+      margin-bottom: 3rem;
+    }
+
+    .whyEasybank-section{
+      display: flex;
+      gap: 3rem;
+
+      .contentCardService{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+    }
+  }
 }
