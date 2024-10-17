@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url(components/btnRequest.css);
+@import url(components/ButtonRequest/btnRequest.css);
+@import url(components/Articles/articleComponent.css);
 
 
 :root{
@@ -55,7 +56,8 @@
 }
 
 body{
-  overflow-x: hidden;
+  background-color: var(--VeryLightGray);
+  overflow-x: hidden !important;
   height: 100%;
 
   .content-headerPage{
@@ -177,4 +179,88 @@ body{
       }
     }
   }
+
+
+  .content-latestArticles{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    padding: 4rem 9rem;
+
+    .bx-articles{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+  }
+
+
+  .contentFooterLangingPage{
+    padding: 2rem 9rem;
+    background-color: var(--DarkBlue);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .infoPage-and-socialContact{
+      width: 760px;
+      display: flex;
+      justify-content: space-between;
+
+      .bx-logo-and-social{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+
+        .bx-logo{
+          width: 100%;
+          .logo{width: 100%; object-fit: cover;}
+        }
+
+        .bx-iconsSocial{
+          display: flex;
+          gap: .7rem;
+
+          .iconSocial{
+            cursor: pointer;
+            .colorIconsSocial{fill: var(--White); transition: .3s ease;}
+
+            &:hover{
+              .colorIconsSocial{fill: var(--LimeGreen);}
+            }
+          }
+        }
+      }
+
+      .navbarFooter{
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+
+        .itemsNavbarFooter{
+          color: var(--White);
+          text-decoration: none;
+          transition: .3s ease;
+
+          &:hover{color: var(--LimeGreen);}
+        }
+      }
+    }
+
+    .content-copyright{
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+
+      .copy{
+        font-size: 14px;
+        color: var(--GrayishBlue);
+      }
+    }
+  }
+  
 }

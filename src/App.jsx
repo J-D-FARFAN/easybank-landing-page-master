@@ -1,5 +1,5 @@
 import "./App.css";
-import { BtnRequest } from "./components/btnRequest";
+import { BtnRequest } from "./components/ButtonRequest/btnRequest";
 
 function App() {
   return (
